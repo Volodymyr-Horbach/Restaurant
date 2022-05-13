@@ -369,6 +369,105 @@ samp{
     height: 50rem;
     filter: drop-shadow(.3rem .7rem .7rem rgba(0,0,0,0.25));
 }
+/* holiday */
+.holiday{
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 10.4rem;
+    background: center/cover no-repeat url('../img/img_zakaz.jpg');
+}
+.holiday__wrapper::after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    inset: 0;
+    z-index: 0;
+}
+.holiday .container{
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+    
+}
+.holiday__description{
+    max-width: 66rem;
+}
+.holiday__header{
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+    font-size: 5.2rem;
+    line-height: 115%;
+    color: #D67E34;
+    margin-bottom: 2rem;
+}
+.holiday__text{
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 138%;
+    color: #FFFFFF;
+}
+.holiday__button{
+    align-self: center;
+}
+/* dish */
+.dish{
+    margin-top: 13.2rem;
+    margin-bottom: 15rem;
+}
+.dish__header{
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+    font-size: 5.4rem;
+    line-height: 115%;
+    text-align: center;
+    margin-bottom: 14rem;
+}
+.dish__wrapper{
+    display: flex;
+}
+.dish__left{
+    margin-right: 3rem;
+    width: 40.5%;
+    height: 47.8rem;
+    overflow: hidden;
+}
+.dish__left img{
+    object-fit: cover;
+}
+.dish__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 59.5%;
+}
+.dish__img-s{
+    width: 16rem;
+    height: 14rem;
+    margin-right: 3rem;
+}
+.dish__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 115%;
+}
+.dish__name span{
+    display: none;
+}
+
+
+
+
+
+
+
 
 
 @media (max-width: 80em){
@@ -470,5 +569,66 @@ samp{
     .history__img-2{
         width: 38rem;
         height: 50rem;
+    }
+    /* holiday */
+    .holiday .container{
+        flex-direction: column;
+    }
+    .holiday__header{
+        font-size: 6rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .holiday__text{
+        font-size: 4.8rem;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    .holiday__button{
+        font-size: 2.8rem;
+        padding: 2.5rem 2rem;
+    }
+    /* dish */
+    .dish__wrapper{
+        flex-direction: column;
+    }
+    .dish__left, .dish__right{
+        width: 100%;
+    }
+    .dish__left{
+        height: 95rem;
+        margin-bottom: 8rem;
+    }
+    .dish__header{
+        font-size: 10rem;
+        margin-bottom: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .dish__item{
+        justify-content: space-between;
+        /* justify-content: flex-start; */
+    }
+    .dish__dotten{
+        display: none;
+    }
+    .dish__item:not(:last-child){
+        margin-bottom: 5rem;
+    }
+    .dish__coin{
+        display: none;
+    }
+    .dish__name span{
+        display: block;
+    }
+    .dish__name{
+        text-align: center;
+        font-weight: 400;
+        font-size: 3.5rem;
+        line-height: 140%;
+    }
+    .dish__img-s{
+        width: 26rem;
+        height: 23rem;
     }
 }
