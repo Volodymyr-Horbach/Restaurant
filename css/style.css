@@ -448,6 +448,7 @@ samp{
     width: 16rem;
     height: 14rem;
     margin-right: 3rem;
+    overflow: hidden;
 }
 .dish__item {
     display: flex;
@@ -627,7 +628,6 @@ samp{
     margin-bottom: 2rem;
 }
 .gallery__item:first-child::after, .gallery__item:first-child::before{
-
     content: '';
     width: 3rem;
     height: 10rem;
@@ -648,17 +648,53 @@ samp{
 }
 .gallery__img-b, .gallery__img-s{
     width: 49%;
+    overflow: hidden;
 }
 .gallery__img-b img, .gallery__img-s img{
     object-fit: cover;
 }
+/* cooks */
+.cooks__header{
+    font-family: 'Tinos';
+    text-align: center;
+    font-weight: 400;
+    font-size: 5.4rem;
+    line-height: 115%;
+    margin-bottom: 10rem;
+}
+.cooks__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+}
+.cooks__img{
+    width: 35rem;
+    height: 46.2rem;
+    overflow: hidden;
+}
+.cooks__img img{
+    object-fit: cover;
+}
 
+.cooks__img-b{
+    margin-top: 10rem;
+}
 
 @media (max-width: 80em){
     html{
         font-size: 0.765vw;
     }
 }
+
+@media(min-width: 48rem){
+    .button:hover{
+        background-color: #D86504;
+    }
+    .dish__wrapper img:hover, .gallery__img-b:hover, .gallery__img-s:hover, .cooks__img:hover{
+        transform: scale(1.05);
+    }
+}
+
 @media(max-width: 48em){
     html{
         font-size: 1.5625vw;
@@ -780,6 +816,8 @@ samp{
         width: 100%;
     }
     .dish__left{
+        margin-left: -4rem;
+        width: 115.5%;
         height: 95rem;
         margin-bottom: 8rem;
     }
@@ -791,7 +829,6 @@ samp{
     }
     .dish__item{
         justify-content: space-between;
-        /* justify-content: flex-start; */
     }
     .dish__dotten{
         display: none;
@@ -926,6 +963,29 @@ samp{
         margin-bottom: 4rem;
     }
     .gallery__img-s img, .gallery__img-b img{
+        object-fit: cover;
+    }
+    /* cooks */
+    .cooks__header{
+        width: 100%;
+        font-size: 10rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .cooks__wrapper{
+        flex-direction: column;
+    }
+    .cooks__img{
+        width: 100%;
+        height: 76rem;
+    }
+    .cooks__img:not(:last-child){
+        margin-bottom: 4rem;
+    }
+    .cooks__img-b{
+        height: 100rem;
+    }
+    .cooks__img-b img{
         object-fit: cover;
     }
 }
