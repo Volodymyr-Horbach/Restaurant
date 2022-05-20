@@ -17,8 +17,10 @@ html{
     line-height: 1.2;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body{
+    position: sticky;
     font-style: normal;
     font-weight: normal;
     -webkit-animation: bugfix infinite 1s;
@@ -272,7 +274,7 @@ samp{
 
     display: flex;
     justify-content: space-between;
-    padding-bottom: 15rem;
+    padding-bottom: 10rem;
     margin-top: -11rem;
 }
 .advantages__item{
@@ -303,6 +305,7 @@ samp{
 }
 /* history */
 .history{
+    padding-top: 5rem;
     padding-bottom: 12.2rem;
 }
 .history__wrapper{
@@ -708,13 +711,14 @@ samp{
     }
     .header__information{
         position: fixed;
-        top: -450px;
-        Width: 40%;
-        left: 22rem;
+        top: -1000px;
+        Width: 50%;
+        height: 50rem;
+        left: 18rem;
         flex-direction: column;
-        background-color: rgb(54, 54, 53);
+        background-color: rgba(54, 54, 53);
         padding: 30px 20px 20px 25px;
-        transition: all 0.5s ease 0.1s;
+        transition: all 0.7s ease 0.1s;
         overflow: auto;
     }
     .header__menu{
@@ -723,11 +727,11 @@ samp{
         margin-left: 0;
     }
     .header__menu li{
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
     .header__telephone{
         margin-left: 0rem;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
     .header__buy, .header__text, .header__buy:after{
         display: none;
@@ -736,7 +740,7 @@ samp{
         margin-left: 0rem;
     }
     .header__information.active{
-        top: 0%;
+        top: 30%;
     }
     .header__burger{
         display: block;
@@ -788,6 +792,9 @@ samp{
         line-height: 140%;
     }
     /* history */
+    .history{
+        padding-top: 0;
+    }
     .history__wrapper{
         flex-direction: column;
     }
